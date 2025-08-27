@@ -1,0 +1,7 @@
+langchain
+langchain-openai
+langchain-ollama
+langgraph
+ollama
+pydantic
+tenacity
