@@ -11,3 +11,9 @@ http://database.n8n.localhost {
         to pgadmin:{$PGADMIN_INTERNAL_PORT}
     }
 }
+
+http://notebook.n8n.localhost {
+    reverse_proxy {
+        to notebook:{$NOTEBOOK_INTERNAL_PORT}
+    }
+}
