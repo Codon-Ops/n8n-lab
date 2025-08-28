@@ -1,6 +1,6 @@
 # Local N8N Development Lab
 
-This repository is a collection of configuration files that define a single `n8n` server running N8N Community Edition and a `Postgres` database. Compiled by Kura Labs, it is intended to faciliate local N8N development and experimentation for learning and instruction purposes.
+This repository is a collection of configuration files that define a single `n8n` server running N8N Community Edition, a `Postgres` database, and a simple Jupyter Notebook environment. Compiled by Kura Labs, it is intended to faciliate local N8N and Python development, as well as experimentation for learning and instruction purposes.
 
 ## Quickstart
 
@@ -9,6 +9,7 @@ This repository is a collection of configuration files that define a single `n8n
 > In order to use the lab, you must have, at a minimum, the following installed on your local machine:
 > - [`git`](https://git-scm.com/downloads)
 > - [`docker`](https://www.docker.com/get-started/) and [`docker compose`](https://www.docker.com/get-started/)
+> - A free account with [`ngrok](https://ngrok.com/) 
 >
 > *Note: To run the lab locally, you should have >=16GB of System Memory on your machine. It may run on machines with less memory, but performance may be poor.*
 
@@ -22,7 +23,17 @@ git clone https://github.com/Codon-Ops/n8n-lab.git
 cd n8n-lab
 ```
 
-2. Start the services
+2. Go to your `ngrok` account and copy your NGrok Auth Token, then add it to the [`.env`](./.env) file in the root of this repo:
+
+Copy/Paste your `ngrok` Auth Token:
+
+![NGrok Auth Token Location](/assets/ngrok-auth-token.png)
+
+Add it to the [`.env`](./.env) file:
+
+![NGrok Auth Token Placement](/assets/ngrok-env.png)
+
+3. Start the services
 
 With the repository downloaded, you can now start up N8N and the other services. In your terminal, execute:
 
@@ -32,7 +43,7 @@ docker compose up -d
 
 This will set up your lab infrastructure. It may take a few minutes to complete depending on your setup.
 
-3. Open the N8N client and register
+4. Open the N8N client and register
 
 Once the lab has finished building, you can go ahead and register yourself with the N8N client here:
 
@@ -110,7 +121,16 @@ Now you've saved your database credentials to your n8n instance! Next we'll set 
 
 That's it for the database connections - you're all set!
 
+## Jupyter Notebook (Python) Environment
+
+Included in this lab is a `Jupyter Notebook` environment that allows you to write and execute Python code locally in your own notebooks. This service is also connected to the database and n8n services, so you can experiment with calling an n8n workflow from your Python code, as well as have a database that your code can connect to.
+
+Simply go to http://notebook.n8n.localhost/lab/?token=ai to access the environment. It will look like this:
+
+![Jupyter Lab Home Screen](/assets/n8n-notebook.jpg)
+
 ## Useful links
 
 * `n8n`: http://n8n.localhost
 * `n8n database admin tool`: http://database.n8n.localhost
+* `jupyter notebook (Python) environment`: http://notebook.n8n.localhost/lab/?token=ai
