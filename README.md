@@ -9,7 +9,7 @@ This repository is a collection of configuration files that define a single `n8n
 > In order to use the lab, you must have, at a minimum, the following installed on your local machine:
 > - [`git`](https://git-scm.com/downloads)
 > - [`docker`](https://www.docker.com/get-started/) and [`docker compose`](https://www.docker.com/get-started/)
-> - A free account with [`ngrok](https://ngrok.com/) 
+> - A free account with [`ngrok`](https://ngrok.com/) 
 >
 > *Note: To run the lab locally, you should have >=16GB of System Memory on your machine. It may run on machines with less memory, but performance may be poor.*
 
