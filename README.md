@@ -129,6 +129,29 @@ Simply go to http://notebook.n8n.localhost/lab/?token=ai to access the environme
 
 ![Jupyter Lab Home Screen](/assets/n8n-notebook.jpg)
 
+## Everyday Docker commands
+- `Stop`: 
+    ```bash
+    docker compose stop
+    ```
+- `Start`: 
+    ```bash
+    docker compose start
+    ```
+- `Logs (live)`: 
+    ```bash 
+    docker compose logs -f
+    ```
+- `Recreate fresh (⚠ WARNING! Erases data!)`: 
+    ```bash 
+    docker compose down -v && docker compose up -d
+    ```
+
+
+7) Troubleshooting (fast)
+- Pages won’t load → Ensure Docker Desktop is running and ```docker compose ps``` shows containers Up.
+
+
 ## Useful links
 
 * `n8n`: http://n8n.localhost
